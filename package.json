@@ -1,0 +1,13 @@
+{
+  "name": "deads-support",
+  "version": "1.0.0",
+  "description": "Discord interactions endpoint for Deads Support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "discord-interactions": "^4.1.1",
+    "express": "^4.19.2"
+  }
+}
