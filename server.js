@@ -86,4 +86,39 @@ app.get('/terms', (req, res) => {
         </html>
     `);
 });
+// --- 4. PRIVACY POLICY PAGE ---
+app.get('/privacy', (req, res) => {
+    res.send(`
+        <html>
+            <head>
+                <title>Deads Support - Privacy Policy</title>
+                <style>
+                    body { font-family: sans-serif; margin: 40px; background: #121212; color: #e0e0e0; line-height: 1.6; }
+                    h1 { color: #ffffff; border-bottom: 2px solid #333; padding-bottom: 10px; }
+                    h2 { color: #ffffff; margin-top: 20px; }
+                    .container { max-width: 800px; margin: 0 auto; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>Privacy Policy</h1>
+                    <p>Last updated: June 2026</p>
+                    <p>This Privacy Policy explains how Deads Support collects, uses, and safeguards your information. By utilizing this application, you consent to the data practices outlined below.</p>
+                    
+                    <h2>1. Information We Collect</h2>
+                    <p>To operate effectively, Deads Support processes basic Discord structural data, including: your Discord User ID, Username, Server ID, and text inputs provided directly within created support channels.</p>
+                    
+                    <h2>2. How We Use Data</h2>
+                    <p>Collected data is used strictly to provide the bot\'s core features: generating private text channels for tickets, routing staff responses, and managing verified user role states. We do not track you across other servers or log unrelated messages.</p>
+                    
+                    <h2>3. Data Sharing & Security</h2>
+                    <p>Your privacy is vital to our organization. We do not sell, trade, or distribute your personal information to third parties. All interaction data transmitted between Discord and our servers is secured using industry-standard SSL/TLS encryption.</p>
+                    
+                    <h2>4. Data Retention & Deletion</h2>
+                    <p>Ticket content and metadata are only retained as long as necessary to resolve your active inquiries. If you wish to have your server\'s historical ticket configuration or data cleared from our system, please contact our management team via our official channels.</p>
+                </div>
+            </body>
+        </html>
+    `);
+});
 app.listen(PORT, () => console.log(`Deads Support running on port ${PORT}`));
