@@ -52,5 +52,38 @@ app.get('/oauth-callback', async (req, res) => {
     
     res.send('<h1>Success! You can now close this tab and return to Discord to claim your role.</h1>');
 });
-
+// --- 3. TERMS OF SERVICE PAGE ---
+app.get('/terms', (req, res) => {
+    res.send(`
+        <html>
+            <head>
+                <title>Deads Support - Terms of Service</title>
+                <style>
+                    body { font-family: sans-serif; margin: 40px; background: #121212; color: #e0e0e0; line-height: 1.6; }
+                    h1 { color: #ffffff; border-bottom: 2px solid #333; padding-bottom: 10px; }
+                    h2 { color: #ffffff; margin-top: 20px; }
+                    .container { max-width: 800px; margin: 0 auto; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>Terms of Service</h1>
+                    <p>Welcome to Deads Support. By adding this application to your server or using its features, you agree to comply with and be bound by the following terms.</p>
+                    
+                    <h2>1. Use of Service</h2>
+                    <p>Deads Support provides community ticketing and role management utilities. You agree not to exploit, abuse, or reverse-engineer the application or use it to violate Discord's official Terms of Service.</p>
+                    
+                    <h2>2. Data Management</h2>
+                    <p>We respect your server data. Information transmitted through this bot (such as ticket logs and user identifiers) is processed strictly to provide functionality and will never be sold or shared maliciously.</p>
+                    
+                    <h2>3. Limitations of Liability</h2>
+                    <p>Deads Support is provided "as is" without warranties of any kind. The development team is not responsible for any server disruptions, data loss, or moderation issues that occur within your community.</p>
+                    
+                    <h2>4. Changes to Terms</h2>
+                    <p>We reserve the right to modify these terms at any time. Continued use of the application constitutes acceptance of any updated terms.</p>
+                </div>
+            </body>
+        </html>
+    `);
+});
 app.listen(PORT, () => console.log(`Deads Support running on port ${PORT}`));
